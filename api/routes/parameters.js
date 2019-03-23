@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const browser = require('../browser');
 
-browser.initializeBrowser();
+// browser.initializeBrowser();
 
 router.post( '/set', function( req, res, next ) {
 

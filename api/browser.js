@@ -1,6 +1,9 @@
+require('dotenv').config();
 const Web3 = require('web3');
+const HDWalletProvider = require('truffle-hdwallet-provider');
 
-const web3 = new Web3( new Web3.providers.HttpProvider( `ropsten.infura.io/v3/${process.env.INFURA_API_KEY}` ) );
+const web3Provider = new HDWalletProvider( process.env.MNEMONIC, `https://ropsten.infura.io/v3/${process.env.INFURA_API_KEY}` );
+const web3 = new Web3( web3Provider );
 
 const contract_abi = [
     {
@@ -266,7 +269,7 @@ const contract_abi = [
   ];
 const contract_address = '0xC584C6724830394558E98F9Cb53e42493B5D4d5C';
 const contract = new web3.eth.Contract( contract_abi, contract_address );
-
+/*
 function initializeBrowser() {
 
     web3.eth.getAccounts().then( function( accounts ) {
@@ -276,7 +279,7 @@ function initializeBrowser() {
     } );
 
 }
-
+*/
 function setParameters( userAddress, params ) {
     return contract.methods.setParameters( userAddress, params ).send( { 
         from: currentAccount, 
@@ -289,7 +292,7 @@ function getParameters( userAddress ) {
 }
 
 module.exports = {
-    initializeBrowser,
+    //initializeBrowser,
     setParameters,
     getParameters
 };
