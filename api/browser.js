@@ -1,6 +1,6 @@
 const Web3 = require('web3');
 
-const web3 = new Web3( new Web3.providers.HttpProvider( "http://127.0.0.1:8545" ) );
+const web3 = new Web3( new Web3.providers.HttpProvider( `ropsten.infura.io/v3/${process.env.INFURA_API_KEY}` ) );
 
 const contract_abi = [
     {
@@ -264,7 +264,7 @@ const contract_abi = [
       "signature": "0x4b04707a"
     }
   ];
-const contract_address = '0xb6FD4169d41271aB9E0f135617e5750eBDaB362C';
+const contract_address = '0xC584C6724830394558E98F9Cb53e42493B5D4d5C';
 const contract = new web3.eth.Contract( contract_abi, contract_address );
 
 function initializeBrowser() {

@@ -3294,15 +3294,21 @@
     "version": "0.4.24+commit.e67f0147.Emscripten.clang"
   },
   "networks": {
+    "3": {
+      "events": {},
+      "links": {},
+      "address": "0x07231777F08C5097212A1C910839Fa522B9A0cd4",
+      "transactionHash": "0x7019be219dc59d0ce86078b8e48da62d38fb228a6d6dda8ecbf8c6d3e6af2d69"
+    },
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x13dc74600F7AA1D46f3A458e297EDD998cb60988",
-      "transactionHash": "0x043f44d1f8564d21c7727c8ea5f16e77ab71208fc8a92fc78b80baf666ce26ba"
+      "address": "0x946f5e7f22d6B2e2691Ca689f0739beC8406dd29",
+      "transactionHash": "0x140bebb847cbab9125a9bc3cffefae909179e692d98b7e876fee39304fd2a331"
     }
   },
   "schemaVersion": "3.0.3",
-  "updatedAt": "2019-03-19T15:17:18.959Z",
+  "updatedAt": "2019-03-23T01:36:24.480Z",
   "devdoc": {
     "methods": {},
     "title": "SafeMath"

@@ -6,4 +6,5 @@ module.exports = function( deployer ) {
     //deployer.deploy( ownable );
     deployer.deploy( safemath );
     deployer.deploy( behaviourtracking );
+    behaviourtracking.deployed().then( ( instance ) => { console.log( instance.address ); } );
 }
